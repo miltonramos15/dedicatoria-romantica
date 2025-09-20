@@ -37,35 +37,24 @@ body {
 }
 
 .petal {
-    animation: sway 5s infinite ease-in-out;
-    transform-origin: center;
-    filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+    animation: gentle-sway 8s infinite ease-in-out;
+    transform-origin: 100px 80px;
+    filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
 }
 
-.outer-petal {
-    animation: sway 6s infinite ease-in-out;
-    filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.7));
+.petal:nth-child(odd) {
+    animation-delay: -1s;
 }
 
-.inner-petal {
-    animation: sway-inner 7s infinite ease-in-out;
-    animation-delay: 0.5s;
-    filter: drop-shadow(0 0 2px rgba(255, 223, 0, 0.5));
+.petal:nth-child(even) {
+    animation-delay: -0.5s;
 }
 
-@keyframes sway {
+@keyframes gentle-sway {
     0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(2deg) scale(1.02); }
-    50% { transform: rotate(-1deg) scale(1); }
-    75% { transform: rotate(1.5deg) scale(1.01); }
-    100% { transform: rotate(0deg) scale(1); }
-}
-
-@keyframes sway-inner {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(-1.5deg) scale(1.01); }
-    50% { transform: rotate(2deg) scale(1.02); }
-    75% { transform: rotate(-1deg) scale(1); }
+    25% { transform: rotate(1deg) scale(1.01); }
+    50% { transform: rotate(-0.5deg) scale(1); }
+    75% { transform: rotate(0.8deg) scale(1.005); }
     100% { transform: rotate(0deg) scale(1); }
 }
 
