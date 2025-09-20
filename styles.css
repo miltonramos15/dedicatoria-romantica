@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.flower-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 2rem;
+}
+
+#yellow-flower {
+    width: 100%;
+    height: 100%;
+}
+
+.petal {
+    transform-origin: center;
+    animation: sway 5s infinite ease-in-out;
+}
+
+@keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+}
+
+.message {
+    margin-top: 2rem;
+}
+
+h1 {
+    color: #FF4B8D;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.romantic-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #555;
+    animation: fadeIn 3s ease-in-out;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-style: italic;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .romantic-text {
+        font-size: 1rem;
+    }
+}
+
+/* Animación para los pétalos */
+.petal:nth-child(1) { animation-delay: 0s; }
+.petal:nth-child(2) { animation-delay: 0.5s; }
+.petal:nth-child(3) { animation-delay: 1s; }
+.petal:nth-child(4) { animation-delay: 1.5s; }
+.petal:nth-child(5) { animation-delay: 2s; }
+.petal:nth-child(6) { animation-delay: 2.5s; }
+
+/* Estilos para el control de música */
+.music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+#play-pause-btn {
+    background-color: #FF4B8D;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#play-pause-btn:hover {
+    background-color: #E43F7A;
+    transform: scale(1.05);
+}
+
+.music-player {
+    display: none;
+}

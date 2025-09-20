@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedicatoria Romántica - 21 de Septiembre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="music-player">
+        <audio id="background-music" loop>
+            <source src="assets/music.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+    <div class="music-control">
+        <button id="play-pause-btn">▶️ Reproducir Música</button>
+    </div>
+    <div class="container">
+        <div class="flower-container">
+            <svg id="yellow-flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tallo -->
+                <path d="M100,200 L100,120" stroke="#3A7D44" stroke-width="4" />
+                
+                <!-- Hojas -->
+                <path d="M100,160 C85,150 75,160 80,170 C85,180 100,175 100,160" fill="#3A7D44" />
+                <path d="M100,140 C115,130 125,140 120,150 C115,160 100,155 100,140" fill="#3A7D44" />
+                
+                <!-- Pétalos -->
+                <ellipse cx="100" cy="80" rx="20" ry="30" fill="#FFD700" transform="rotate(0 100 80)" class="petal" />
+                <ellipse cx="100" cy="80" rx="20" ry="30" fill="#FFD700" transform="rotate(60 100 80)" class="petal" />
+                <ellipse cx="100" cy="80" rx="20" ry="30" fill="#FFD700" transform="rotate(120 100 80)" class="petal" />
+                <ellipse cx="100" cy="80" rx="20" ry="30" fill="#FFD700" transform="rotate(180 100 80)" class="petal" />
+                <ellipse cx="100" cy="80" rx="20" ry="30" fill="#FFD700" transform="rotate(240 100 80)" class="petal" />
+                <ellipse cx="100" cy="80" rx="20" ry="30" fill="#FFD700" transform="rotate(300 100 80)" class="petal" />
+                
+                <!-- Centro de la flor -->
+                <circle cx="100" cy="80" r="15" fill="#FFA500" />
+            </svg>
+        </div>
+        
+        <div class="message">
+            <h1>Feliz 21 de Septiembre</h1>
+            <p class="romantic-text">En este día especial, te regalo esta flor amarilla como símbolo de mi amor.</p>
+            <p class="romantic-text">Cada pétalo representa un momento especial que hemos compartido juntos.</p>
+            <p class="romantic-text">Te quiero con todo mi corazón.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Con amor, para ti ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
