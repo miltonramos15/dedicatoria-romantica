@@ -39,11 +39,28 @@ body {
 .petal {
     transform-origin: center;
     animation: sway 5s infinite ease-in-out;
+    filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.5));
+}
+
+.inner-petal {
+    animation: sway-inner 6s infinite ease-in-out;
+    animation-delay: 0.5s;
 }
 
 @keyframes sway {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(5deg); }
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes sway-inner {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    50% { transform: rotate(3deg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
 }
 
 .message {
