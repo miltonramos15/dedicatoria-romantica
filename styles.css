@@ -26,8 +26,8 @@ body {
 }
 
 .flower-container {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 350px;
     margin: 0 auto 2rem;
 }
 
@@ -36,27 +36,40 @@ body {
     height: 100%;
 }
 
-.petal {
-    animation: gentle-sway 8s infinite ease-in-out;
-    transform-origin: 100px 80px;
+/* Estilos para pétalos exteriores */
+.petal.outer {
+    transform-origin: 150px 150px;
+    filter: drop-shadow(0 3px 6px rgba(255, 193, 7, 0.4));
+    transform: rotate(0) scale(1) !important;
+    transform-box: fill-box;
+}
+
+/* Estilos para pétalos interiores */
+.petal.inner {
+    transform-origin: 150px 150px;
     filter: drop-shadow(0 2px 4px rgba(255, 193, 7, 0.3));
+    transform: rotate(0) scale(1) !important;
+    transform-box: fill-box;
 }
 
-.petal:nth-child(odd) {
-    animation-delay: -1s;
+/* Estilos para hojas */
+.leaf {
+    transform-origin: center;
 }
 
-.petal:nth-child(even) {
-    animation-delay: -0.5s;
+/* Estilos para el centro */
+.center {
+    transform-origin: center;
 }
 
-@keyframes gentle-sway {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(1deg) scale(1.01); }
-    50% { transform: rotate(-0.5deg) scale(1); }
-    75% { transform: rotate(0.8deg) scale(1.005); }
-    100% { transform: rotate(0deg) scale(1); }
+/* Estilos para semillas */
+.seeds {
+    /* Sin animación */
 }
+
+/* Estilos para pétalos individuales - sin animaciones */
+
+/* Sin animaciones */
 
 .message {
     margin-top: 2rem;
@@ -96,6 +109,11 @@ footer {
         padding: 1rem;
     }
     
+    .flower-container {
+        width: 250px;
+        height: 290px;
+    }
+    
     h1 {
         font-size: 2rem;
     }
@@ -104,14 +122,6 @@ footer {
         font-size: 1rem;
     }
 }
-
-/* Animación para los pétalos */
-.petal:nth-child(1) { animation-delay: 0s; }
-.petal:nth-child(2) { animation-delay: 0.5s; }
-.petal:nth-child(3) { animation-delay: 1s; }
-.petal:nth-child(4) { animation-delay: 1.5s; }
-.petal:nth-child(5) { animation-delay: 2s; }
-.petal:nth-child(6) { animation-delay: 2.5s; }
 
 /* Estilos para el control de música */
 .music-control {

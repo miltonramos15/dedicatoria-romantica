@@ -18,62 +18,123 @@
     </div>
     <div class="container">
         <div class="flower-container">
-            <svg id="yellow-flower" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <!-- Gradientes elegantes y suaves -->
+            <svg id="yellow-flower" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
                 <defs>
-                    <radialGradient id="petalGradient" cx="50%" cy="20%" r="80%">
-                        <stop offset="0%" style="stop-color:#FFEB3B;stop-opacity:1" />
-                        <stop offset="60%" style="stop-color:#FFC107;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#FF8F00;stop-opacity:1" />
+                    <!-- Gradiente realista para pétalos -->
+                    <radialGradient id="petalGradient" cx="30%" cy="20%" r="70%">
+                        <stop offset="0%" style="stop-color:#FFF59D;stop-opacity:1" />
+                        <stop offset="40%" style="stop-color:#FFEB3B;stop-opacity:1" />
+                        <stop offset="80%" style="stop-color:#FFC107;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#FF8F00;stop-opacity:0.9" />
                     </radialGradient>
-                    <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
+                    
+                    <!-- Gradiente para el centro -->
+                    <radialGradient id="centerGradient" cx="50%" cy="50%" r="60%">
                         <stop offset="0%" style="stop-color:#8D6E63;stop-opacity:1" />
+                        <stop offset="30%" style="stop-color:#6D4C41;stop-opacity:1" />
                         <stop offset="70%" style="stop-color:#5D4037;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#3E2723;stop-opacity:1" />
                     </radialGradient>
+                    
+                    <!-- Gradiente para tallo -->
                     <linearGradient id="stemGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#388E3C;stop-opacity:1" />
-                        <stop offset="50%" style="stop-color:#4CAF50;stop-opacity:1" />
+                        <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#388E3C;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1B5E20;stop-opacity:1" />
+                    </linearGradient>
+                    
+                    <!-- Gradiente para hojas -->
+                    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#388E3C;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
                     </linearGradient>
                 </defs>
                 
-                <!-- Tallo elegante -->
-                <rect x="96" y="120" width="8" height="80" fill="url(#stemGradient)" rx="4" />
+                <!-- Tallo principal -->
+                <rect x="145" y="180" width="10" height="170" fill="url(#stemGradient)" rx="5" />
                 
-                <!-- Hojas simples y elegantes -->
-                <ellipse cx="85" cy="150" rx="12" ry="20" fill="url(#stemGradient)" transform="rotate(-30 85 150)" opacity="0.9" />
-                <ellipse cx="115" cy="140" rx="12" ry="20" fill="url(#stemGradient)" transform="rotate(30 115 140)" opacity="0.9" />
+                <!-- Hojas naturales -->
+                <path d="M 130 220 Q 110 230 120 250 Q 130 260 145 250 Z" fill="url(#leafGradient)" class="leaf" />
+                <path d="M 165 240 Q 185 250 175 270 Q 165 280 150 270 Z" fill="url(#leafGradient)" class="leaf" />
+                <path d="M 125 280 Q 100 290 110 315 Q 125 325 145 315 Z" fill="url(#leafGradient)" class="leaf" />
                 
-                <!-- 12 pétalos principales con forma elegante -->
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(0 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(30 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(60 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(90 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(120 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(150 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(180 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(210 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(240 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(270 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(300 100 80)" class="petal" />
-                <ellipse cx="100" cy="50" rx="8" ry="25" fill="url(#petalGradient)" transform="rotate(330 100 80)" class="petal" />
+                <!-- Pétalos exteriores (formando un círculo completo) -->
+                <g class="petals-outer">
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(0 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(22.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(45 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(67.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(90 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(112.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(135 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(157.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(180 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(202.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(225 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(247.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(270 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(292.5 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(315 150 150)" class="petal outer" />
+                    <ellipse cx="150" cy="90" rx="25" ry="50" fill="url(#petalGradient)" transform="rotate(337.5 150 150)" class="petal outer" />
+                </g>
                 
-                <!-- Centro hermoso con textura -->
-                <circle cx="100" cy="80" r="18" fill="url(#centerGradient)" />
-                <circle cx="100" cy="80" r="14" fill="#6D4C41" opacity="0.8" />
+                <!-- Pétalos interiores -->
+                <g class="petals-inner">
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(11.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(33.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(56.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(78.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(101.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(123.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(146.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(168.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(191.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(213.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(236.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(258.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(281.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(303.75 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(326.25 150 150)" class="petal inner" opacity="0.9" />
+                    <ellipse cx="150" cy="100" rx="18" ry="40" fill="url(#petalGradient)" transform="rotate(348.75 150 150)" class="petal inner" opacity="0.9" />
+                </g>
                 
-                <!-- Patrón de semillas en espiral -->
-                <circle cx="95" cy="75" r="1" fill="#3E2723" />
-                <circle cx="100" cy="73" r="1" fill="#3E2723" />
-                <circle cx="105" cy="75" r="1" fill="#3E2723" />
-                <circle cx="92" cy="80" r="1" fill="#3E2723" />
-                <circle cx="97" cy="78" r="1" fill="#3E2723" />
-                <circle cx="103" cy="78" r="1" fill="#3E2723" />
-                <circle cx="108" cy="80" r="1" fill="#3E2723" />
-                <circle cx="95" cy="85" r="1" fill="#3E2723" />
-                <circle cx="100" cy="87" r="1" fill="#3E2723" />
-                <circle cx="105" cy="85" r="1" fill="#3E2723" />
+                <!-- Centro del girasol -->
+                <circle cx="150" cy="150" r="28" fill="url(#centerGradient)" class="center" />
+                <circle cx="150" cy="150" r="22" fill="#5D4037" opacity="0.8" />
+                <circle cx="150" cy="150" r="16" fill="#4A2C2A" opacity="0.6" />
+                
+                <!-- Patrón de semillas realista -->
+                <g class="seeds">
+                    <!-- Anillo exterior de semillas -->
+                    <circle cx="135" cy="135" r="1.5" fill="#2E1A17" />
+                    <circle cx="145" cy="130" r="1.5" fill="#2E1A17" />
+                    <circle cx="155" cy="135" r="1.5" fill="#2E1A17" />
+                    <circle cx="165" cy="145" r="1.5" fill="#2E1A17" />
+                    <circle cx="165" cy="155" r="1.5" fill="#2E1A17" />
+                    <circle cx="155" cy="165" r="1.5" fill="#2E1A17" />
+                    <circle cx="145" cy="170" r="1.5" fill="#2E1A17" />
+                    <circle cx="135" cy="165" r="1.5" fill="#2E1A17" />
+                    <circle cx="125" cy="155" r="1.5" fill="#2E1A17" />
+                    <circle cx="125" cy="145" r="1.5" fill="#2E1A17" />
+                    
+                    <!-- Anillo medio de semillas -->
+                    <circle cx="140" cy="140" r="1.2" fill="#3E2723" />
+                    <circle cx="150" cy="138" r="1.2" fill="#3E2723" />
+                    <circle cx="160" cy="145" r="1.2" fill="#3E2723" />
+                    <circle cx="160" cy="155" r="1.2" fill="#3E2723" />
+                    <circle cx="150" cy="162" r="1.2" fill="#3E2723" />
+                    <circle cx="140" cy="160" r="1.2" fill="#3E2723" />
+                    <circle cx="130" cy="155" r="1.2" fill="#3E2723" />
+                    <circle cx="130" cy="145" r="1.2" fill="#3E2723" />
+                    
+                    <!-- Centro de semillas -->
+                    <circle cx="145" cy="145" r="1" fill="#1A0E0C" />
+                    <circle cx="155" cy="150" r="1" fill="#1A0E0C" />
+                    <circle cx="150" cy="155" r="1" fill="#1A0E0C" />
+                    <circle cx="145" cy="155" r="1" fill="#1A0E0C" />
+                    <circle cx="150" cy="145" r="1" fill="#1A0E0C" />
+                </g>
             </svg>
         </div>
         
